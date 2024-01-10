@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .modal_bg {display: block; width: 100vw; height: 100vh; position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: -1; filter: blur(5px); background-color: transparent; margin: 0; padding: 0;}
+        .modal_wrap {display: block; width: 100%; height: auto; position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 110; text-align: center;}
+        .modal_wrap .modal_box {display: inline-flex; width: 100%; max-width: 300px; height: auto;  flex-direction: column; margin: 0 auto; padding: 20px 0 0; border-radius: 10px; background-color: rgba(49, 43, 43, 0.85); color: #fff; position: relative; align-items: center; justify-content: center;}
+        .modal_wrap .modal_box .modal_tit {display: block; width: 100%; height: auto; font-size: 24px; font-weight: 700; text-align: center; padding: 10px 16px; box-sizing: border-box; word-break: break-all;}
+        .modal_wrap .modal_box .modal_img {display: block; width: 100%; height: auto; padding: 10px 20px; box-sizing: border-box;}
+        .modal_wrap .modal_box .modal_cnt {display: block; width: 100%; height: auto; text-align: left; font-size: 22px; font-weight: 300; padding: 10px 20px; box-sizing: border-box; word-break: break-all;}
+        .modal_btn_wrap {display: flex; width: 100%; height: auto; flex-wrap: wrap; border-top: 1px solid #2D9CDB; flex-direction: row; margin-top: 10px; margin-top: auto; margin-top: 20px;}
+        .modal_btn_wrap.col {flex-direction: column;}
+        .modal_btn_wrap .modal_btn {flex: 1;display: flex; width: auto; height: auto; padding: 10px; align-items: center; justify-content: center; color: #2D9CDB; font-size: 22px; font-weight: 700; background-color: transparent; flex-wrap: nowrap; border: 0; cursor: pointer; box-sizing: border-box;}
+        .modal_btn_wrap .modal_btn:not(:first-child) {border-left: 1px solid #2D9CDB;}
+        .modal_btn_wrap.col .modal_btn:not(:first-child) {border-top: 1px solid #2D9CDB;}
+
+
+    </style>    
+
+    <div class="modal_wrap">
+        <div class="modal_bg"></div>
+        <div class="modal_box">
+
+            <!-- 기반 -->
+            <!-- <span class="modal_tit">'SGDVD'앱이 사용자의 위치를 사용하도록 허용하겠습니까?</span>
+            <img class="modal_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlmJck_eNzz1sTTPGyAOjEQsMzgFRWW92xTQ&usqp=CAU" alt="">
+            <p class="modal_cnt">
+                귀하의 데이터는 귀하에게 더 나은 맞춤형 광고 경험을 제공하는데 사용됩니다.
+            </p>
+            <div class="modal_btn_wrap col">
+                <button class="modal_btn" type="button">한번 허용</button>
+                <button class="modal_btn" type="button">앱을 사용하는 동안 허용</button>
+                <button class="modal_btn" type="button">허용 안함</button>
+            </div> -->
+            <!-- //기반// -->
+
+            <!-- 계정 생성 완료 -->
+            <span class="modal_tit">
+                ‘SGDV’ 계정 생성이<br>
+                완료되었습니다.
+            </span>
+            <div class="modal_btn_wrap col">
+                <button class="modal_btn" type="button">완료</button>
+            </div>
+            <!-- //계정 생성 완료// -->
+
+
+            <!-- 앱 사용자 위치 허용 -->
+            <!-- <span class="modal_tit">
+                ‘SGDV’앱이 사용자의<br>
+                위치를 사용하도록<br>
+                허용하겠습니까?
+            </span>
+            <img class="modal_img" src="./google map.png" alt="">
+            <div class="modal_btn_wrap col">
+                <button class="modal_btn" type="button">한번 허용</button>
+                <button class="modal_btn" type="button">앱을 사용하는 동안 허용</button>
+                <button class="modal_btn" type="button">허용 안 함</button>
+            </div> -->
+            <!-- //앱 사용자 위치 허용// -->
+
+            <!-- 앱 활동 추적 -->
+            <!-- <span class="modal_tit">
+                ‘SGDV’앱이(가) 다른<br>
+                회사의 앱 및 웹사이트에<br>
+                걸친 사용자의 활동을<br>
+                추적하도록<br>
+                허용하겠습니까?
+            </span>
+            <p class="modal_cnt">
+                귀하의 데이터는 귀하에게 더 나은 맞춤형 광고 경험을 제공하는데 사용됩니다.
+            </p>
+            <div class="modal_btn_wrap col">
+                <button class="modal_btn" type="button">앱에서 추적 금지 요청</button>
+                <button class="modal_btn" type="button">허용</button>
+            </div> -->
+            <!-- //앱 활동 추적// -->
+
+            <!-- 앱 알림 -->
+            <!-- <span class="modal_tit">
+                ‘SGDV’에서 알림을 보내고자 합니다.
+            </span>
+            <p class="modal_cnt">
+                경고, 사운드 및 아이콘 
+                배지가 알림에 포함될 수 
+                있습니다.<br>
+                설정에서 이를 구성할 수 
+                있습니다. 
+            </p>
+            <div class="modal_btn_wrap">
+                <button class="modal_btn" type="button">허용 안 함</button>
+                <button class="modal_btn" type="button">허용</button>
+            </div> -->
+            <!-- //앱 알림// -->
+
+            <!-- 앱 활동 추적 -->
+            <!-- <span class="modal_tit">
+                ‘SGDV’앱이 Face ID를<br>
+                사용하도록 허용하겠습니까?
+            </span>
+            <p class="modal_cnt">
+                Face ID로 잠금 해제 기능을 사용하려면 SGDV가 Face ID에 접근하도록 허용해주세요. 
+            </p>
+            <div class="modal_btn_wrap">
+                <button class="modal_btn" type="button">허용 안 함</button>
+                <button class="modal_btn" type="button">허용</button>
+            </div> -->
+            <!-- //앱 활동 추적// -->
+
+            <!-- 이메일 인증 -->
+            <!-- <span class="modal_tit">
+                이메일 계정이<br>
+                인증되었습니다.
+            </span>
+            <div class="modal_btn_wrap">
+                <button class="modal_btn" type="button">확인</button>
+            </div> -->
+            <!-- //이메일 인증// -->
+
+            <!-- 신규 비밀번호 -->
+            <!-- <span class="modal_tit">
+                새로운 비밀번호가<br>
+                생성되었습니다.
+            </span>
+            <div class="modal_btn_wrap">
+                <button class="modal_btn" type="button">확인</button>
+            </div> -->
+            <!-- //신규 비밀번호// -->
+
+            <!-- 앱 카메라 허용 -->
+            <!-- <span class="modal_tit">
+                ‘SGDV’앱이(가) 카메라를
+                사용하도록 허용하겠습니까?
+            </span>
+            <p class="modal_cnt">
+                QR을 스캔하기 위해 SGDV가 카메라에 접근하도록 허용해주세요.
+            </p>
+            <div class="modal_btn_wrap">
+                <button class="modal_btn" type="button">허용 안 함</button>
+                <button class="modal_btn" type="button">허용</button>
+            </div> -->
+            <!-- //앱 카메라 허용// -->
+
+            <!-- 접근 허용 -->
+            <!-- <span class="modal_tit">
+                접근을 허용해주세요.
+            </span>
+            <p class="modal_cnt">
+                QR을 스캔하기 위해 SGDV가 카메라에 접근하도록 허용해주세요.<br>
+                ‘설정’ > ‘SGDV’ >’ 카메라’
+            </p>
+            <div class="modal_btn_wrap">
+                <button class="modal_btn" type="button">취소</button>
+                <button class="modal_btn" type="button">설정</button>
+            </div> -->
+            <!-- //접근 허용// -->
+
+            <!-- 앱 카메라 허용 -->
+            <!-- <img src="./modal_Love Circled.png" alt="">
+            <span class="modal_tit">
+                해당 내역을 MyPick에서
+                확인할 수 있습니다. 
+            </span>
+            <div class="modal_btn_wrap">
+                <button class="modal_btn" type="button">확인</button>
+            </div> -->
+            <!-- //앱 카메라 허용// -->
+            
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>
